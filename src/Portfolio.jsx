@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Github, Linkedin, Mail, MapPin, Phone, ChevronRight, ExternalLink, Menu, X } from 'lucide-react';
-
+import myImage from './assets/pic.png';
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,7 +44,7 @@ export default function Portfolio() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white shadow-md ">
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
               <MobileNavItem active={activeSection === 'home'} onClick={() => scrollToSection('home')}>Home</MobileNavItem>
               <MobileNavItem active={activeSection === 'about'} onClick={() => scrollToSection('about')}>About</MobileNavItem>
               <MobileNavItem active={activeSection === 'education'} onClick={() => scrollToSection('education')}>Education</MobileNavItem>
@@ -59,13 +59,15 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content */}
-      <main className="pt-16">
+      <main className="pt-9">
         {/* Hero Section */}
         <section id="home" className="min-h-[70vh] flex items-center bg-gradient-to-br from-blue-50 to-indigo-50 ">
           <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/2 mb-10 md:mb-0">
               <div className="bg-white p-6 rounded-lg shadow-lg">
-                <img src="/api/placeholder/400/400" alt="Sohrab Memari" className="w-full h-auto rounded-lg" />
+                      <img src={myImage} alt="Description" />
+
+                {/* <img src="/api/placeholder/400/400" alt="Sohrab Memari" className="w-full h-auto rounded-lg" /> */}
               </div>
             </div>
             <div className="w-full md:w-1/2 md:pl-12 ">
@@ -94,6 +96,8 @@ export default function Portfolio() {
               <div className="w-full md:w-1/3">
                 <div className="bg-blue-50 p-6 rounded-lg shadow-md">
                   <h3 className="text-xl font-bold mb-4 text-blue-700">Personal Details</h3>
+                 
+          
                   <PersonalDetail icon={<MapPin size={18} />} label="Location">Trikomo, Cyprus</PersonalDetail>
                   <PersonalDetail icon={<Phone size={18} />} label="Phone">+905338242540</PersonalDetail>
                   <PersonalDetail icon={<Mail size={18} />} label="Email">sohrab.mri@gmail.com</PersonalDetail>
@@ -289,7 +293,7 @@ function MobileNavItem({ children, active, onClick }) {
   return (
     <button 
       onClick={onClick} 
-      className={`block w-full text-left px-6 py-2 transition-colors duration-300 ${active ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50'}`}
+      className={`block  text-left px-6 py-2 transition-colors duration-300 ${active ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50'}`}
     >
       {children}
     </button>
@@ -337,7 +341,7 @@ function SocialIconButton({ icon, href }) {
 // Info Components
 function PersonalDetail({ icon, label, children }) {
   return (
-    <div className="flex items-start mb-4">
+    <div className="flex mb-4">
       <div className="text-blue-600 mr-3 mt-1">{icon}</div>
       <div>
         <div className="text-sm text-gray-500">{label}</div>
