@@ -91,7 +91,7 @@ export default function Portfolio() {
               <div className="w-full md:w-2/3">
                 <p className="text-lg mb-6">I am a 4th year Computer Engineering student at Eastern Mediterranean University with a strong academic record (CGPA: 3.60/4.00). My technical expertise includes AI development, software engineering, and web development.</p>
                 <p className="text-lg mb-6">I'm passionate about applying technology to solve real-world problems, as demonstrated by my AI classifier project that achieved 92% precision and my contribution to the Teknofest tourism website project.</p>
-                <p className="text-lg">My experience includes roles as a System Administrative Assistant at EMU, working in R&D at Comtech, and tutoring Object-Oriented Programming in Java. I'm proficient in multiple programming languages and frameworks, including Python, C, Java, React, and Django.</p>
+                <p className="text-lg">My experience includes roles such as  System Administrative Assistant at EMU, working in R&D at Comtech, and tutoring Object-Oriented Programming in Java. I'm proficient in multiple programming languages and frameworks, including Python, C, Java, React, and Django.</p>
               </div>
               <div className="w-full md:w-1/3">
                 <div className="bg-blue-50 p-6 rounded-lg shadow-md">
